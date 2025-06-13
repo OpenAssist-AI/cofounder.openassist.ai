@@ -1,5 +1,0 @@
-mkdir public
-mv logo.svg public/
-git add public/logo.svg
-git commit -m "Move logo to public folder"
-git push
