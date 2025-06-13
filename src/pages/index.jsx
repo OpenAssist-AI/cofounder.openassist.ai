@@ -37,9 +37,9 @@ export default function OpenAssistApp() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-16 flex flex-col items-center text-center">
-      <div className="flex flex-col items-center space-y-8 mb-14">
-        <img src="/logo.svg" alt="OpenAssist Logo" className="h-9 sm:h-11" onError={(e) => e.currentTarget.style.display='none'} />
+    <main className="min-h-screen bg-gray-50 px-4 py-20 flex flex-col items-center text-center">
+      <div className="flex flex-col items-center space-y-10 mb-16">
+        <img src="/logo.svg" alt="OpenAssist Logo" className="h-7 sm:h-9" onError={(e) => e.currentTarget.style.display='none'} />
         <p className="text-gray-600 max-w-2xl text-base sm:text-lg">
           Your AI Co-Founder. Get brutally honest, actionable advice from a battle-tested startup perspective.
         </p>
@@ -82,7 +82,7 @@ export default function OpenAssistApp() {
       <form onSubmit={handleSubmit} className="w-full max-w-xl relative px-2 sm:px-0">
         <input
           type="text"
-          className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black pr-12 text-sm sm:text-base"
+          className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black pr-12 text-sm sm:text-base placeholder:truncate"
           placeholder="Describe what you're building and where you're stuck..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
