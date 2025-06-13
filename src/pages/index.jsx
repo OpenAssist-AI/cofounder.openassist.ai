@@ -39,7 +39,7 @@ export default function OpenAssistApp() {
   return (
     <main className="min-h-screen bg-gray-50 px-4 py-10 flex flex-col items-center text-center">
       <div className="flex flex-col items-center space-y-3 mb-8">
-        <img src="/logo.svg" alt="OpenAssist Logo" className="h-10" />
+        <img src="/public/logo.svg" alt="OpenAssist Logo" className="h-10" />
         <p className="text-gray-600 max-w-2xl">
           Your AI co-founder. Get brutally honest, actionable advice from a battle-tested startup perspective.
         </p>
