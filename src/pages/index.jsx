@@ -37,15 +37,15 @@ export default function OpenAssistApp() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-12 flex flex-col items-center text-center">
-      <div className="flex flex-col items-center space-y-4 mb-10">
-        <img src="/logo.svg" alt="OpenAssist Logo" className="h-12" onError={(e) => e.currentTarget.style.display='none'} />
+    <main className="min-h-screen bg-gray-50 px-4 py-16 flex flex-col items-center text-center">
+      <div className="flex flex-col items-center space-y-8 mb-14">
+        <img src="/logo.svg" alt="OpenAssist Logo" className="h-9 sm:h-11" onError={(e) => e.currentTarget.style.display='none'} />
         <p className="text-gray-600 max-w-2xl text-base sm:text-lg">
-          Your AI co-founder. Get brutally honest, actionable advice from a battle-tested startup perspective.
+          Your AI Co-Founder. Get brutally honest, actionable advice from a battle-tested startup perspective.
         </p>
       </div>
 
-      <div className="w-full max-w-3xl bg-white p-6 rounded-xl shadow mb-12">
+      <div className="w-full max-w-3xl bg-white p-6 rounded-xl shadow mb-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="bg-gray-50 border rounded-lg p-4 text-left flex items-start space-x-3 group hover:scale-[1.02] hover:shadow-sm transition-all duration-200">
             <Target className="w-6 h-6 text-slate-600 mt-1 transition-transform duration-200 group-hover:scale-110" />
@@ -82,7 +82,7 @@ export default function OpenAssistApp() {
       <form onSubmit={handleSubmit} className="w-full max-w-xl relative px-2 sm:px-0">
         <input
           type="text"
-          className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black pr-12 text-base sm:text-sm"
+          className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black pr-12 text-sm sm:text-base"
           placeholder="Describe what you're building and where you're stuck..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
