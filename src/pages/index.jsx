@@ -37,15 +37,15 @@ export default function OpenAssistApp() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-10 flex flex-col items-center text-center">
-      <div className="flex flex-col items-center space-y-3 mb-8">
-        <img src="/logo.svg" alt="OpenAssist Logo" className="h-10" />
-        <p className="text-gray-600 max-w-2xl">
+    <main className="min-h-screen bg-gray-50 px-4 py-12 flex flex-col items-center text-center">
+      <div className="flex flex-col items-center space-y-4 mb-10">
+        <img src="/logo.svg" alt="OpenAssist Logo" className="h-12" onError={(e) => e.currentTarget.style.display='none'} />
+        <p className="text-gray-600 max-w-2xl text-base sm:text-lg">
           Your AI co-founder. Get brutally honest, actionable advice from a battle-tested startup perspective.
         </p>
       </div>
 
-      <div className="w-full max-w-3xl bg-white p-6 rounded-xl shadow mb-10">
+      <div className="w-full max-w-3xl bg-white p-6 rounded-xl shadow mb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="bg-gray-50 border rounded-lg p-4 text-left flex items-start space-x-3 group hover:scale-[1.02] hover:shadow-sm transition-all duration-200">
             <Target className="w-6 h-6 text-slate-600 mt-1 transition-transform duration-200 group-hover:scale-110" />
@@ -63,7 +63,7 @@ export default function OpenAssistApp() {
           </div>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-12">
           <h3 className="text-lg font-semibold text-black mb-4">What's on your mind?</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {suggestions.map((text, index) => (
@@ -72,34 +72,34 @@ export default function OpenAssistApp() {
                 onClick={() => handleSuggestionClick(text)}
                 className="border border-gray-300 rounded-lg px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-left"
               >
-                “{text}”
+                "{text}"
               </button>
             ))}
           </div>
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="w-full max-w-xl relative">
+      <form onSubmit={handleSubmit} className="w-full max-w-xl relative px-2 sm:px-0">
         <input
           type="text"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black pr-12"
+          className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black pr-12 text-base sm:text-sm"
           placeholder="Describe what you're building and where you're stuck..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        
-        <button type="submit" className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black text-white p-3 rounded-md hover:bg-gray-800">
+
+        <button type="submit" className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-black text-white p-3 rounded-md hover:bg-gray-800">
           <ArrowRight className="w-5 h-5" />
         </button>
       </form>
 
       {response && (
-        <div className="mt-10 w-full max-w-xl bg-white p-6 rounded-lg shadow text-left">
-          <pre className="whitespace-pre-wrap font-sans text-gray-800">{response}</pre>
+        <div className="mt-12 w-full max-w-xl bg-white p-6 rounded-lg shadow text-left">
+          <pre className="whitespace-pre-wrap font-sans text-gray-800 text-sm sm:text-base">{response}</pre>
         </div>
       )}
 
-      <p className="text-xs text-gray-400 mt-10">OpenAssist provides startup advice based on common patterns and frameworks. Always validate advice with real market feedback.</p>
+      <p className="text-xs text-gray-400 mt-12">OpenAssist provides startup advice based on common patterns and frameworks. Always validate advice with real market feedback.</p>
     </main>
   );
 }
